@@ -1,0 +1,14 @@
+import random
+def get_numbers_ticket(min,max,quantity):
+    if min<1 or max>1000 or quantity <1 or quantity>(max - min +1):
+        return[]
+    numbers=random.sample(range(min,max+1),quantity)
+    numbers.sort()
+
+    return numbers
+min_value=1
+max_value=49
+quantity_value=6
+
+ticket_numbers=get_numbers_ticket(min_value,max_value,quantity_value)
+print(ticket_numbers)
